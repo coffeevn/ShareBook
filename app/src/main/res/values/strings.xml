@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ShareBook</string>
+    <string name="my_web_client_id">225434757560-ssduqtpmtctlqk68hhksnkomb0ak7d83.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">1852491515048418</string>
+    <string name="fb_login_protocol_scheme">fb1852491515048418</string>
+    <string name="fb_login_text">Đăng nhập bằng Facebook</string>
+    <string name="fb_logout_text">Đăng xuất khỏi Facebook</string>
+    <string name="sign_in">Đăng nhập</string>
+    <string name="sign_up">Đăng ký</string>
+    <string name="sign_in_to_continue">Vui lòng đăng nhập để tiếp tục!</string>
+    <string name="your_email">Your email:</string>
+    <string name="your_password">Your password:</string>
+    <string name="register">Đăng ký tài khoản mới</string>
+    <string name="re_password">Retype your Password:</string>
+    <string name="your_name">Tên bạn:</string>
+    <string name="your_phone">Số điện thoại:</string>
+    <string name="back">Trở về</string>
+    <string name="error_sign_up_name">Vui lòng nhập tên bạn!</string>
+    <string name="state">Khu vực:</string>
+    <string name="district">Quận:</string>
+    <string name="userDescription">Mô tả:</string>
+    <string name="update">Cập nhật</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

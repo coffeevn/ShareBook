@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/usericon"
+            android:title="Trang chủ" />
+        <item
+            android:id="@+id/nav_findbook"
+            android:icon="@drawable/usericon"
+            android:title="Tìm sách" />
+        <item
+            android:id="@+id/nav_newbook"
+            android:icon="@drawable/usericon"
+            android:title="Đăng tin mới" />
+        <item
+            android:id="@+id/nav_mybook"
+            android:icon="@drawable/usericon"
+            android:title="Sách đang bán" />
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/usericon"
+            android:title="Tài khoản" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/usericon"
+            android:title="Đăng xuất" />
+    </group>
+</menu>

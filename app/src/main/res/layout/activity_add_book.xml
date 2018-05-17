@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="3dp"
+    tools:context=".activity.AddBookActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlAddBook"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlPrimaryBook"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Đăng tin rao bán hoặc cho thuê sách" />
+
+            <ImageView
+                android:id="@+id/add_book_ivCover"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+
+            <TextView
+                android:id="@+id/tvAddBookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_toEndOf="@+id/add_book_ivCover"
+                android:text="Nhập tên sách:" />
+
+            <EditText
+                android:id="@+id/etAddBookName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAddBookName"
+                android:layout_toEndOf="@+id/add_book_ivCover"/>
+
+            <TextView
+                android:id="@+id/tvAddBookAuthor"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etAddBookName"
+                android:layout_toEndOf="@+id/add_book_ivCover"
+                android:text="Nhập tên tác giả:" />
+
+            <EditText
+                android:id="@+id/etAddBookAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAddBookAuthor"
+                android:layout_toEndOf="@+id/add_book_ivCover"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvAddBookDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rlPrimaryBook"
+            android:text="Thêm mô tả cho sách:" />
+
+        <EditText
+            android:id="@+id/etAddBookDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvAddBookDescription"
+            android:lines="4"/>
+
+        <RadioGroup
+            android:id="@+id/rgSellOrRent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal"
+            android:layout_below="@+id/etAddBookDescription" >
+
+            <RadioButton
+                android:id="@+id/rbAddBookSell"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bán" />
+
+            <RadioButton
+                android:id="@+id/rbAddBookRent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cho thuê" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/tvAddBookXN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/rgSellOrRent"/>
+
+        <Button
+            android:id="@+id/btAddBookUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAddBookXN"
+            android:layout_centerHorizontal="true"
+            android:text="Đăng tin" />
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:id="@+id/ivUploading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+
+</FrameLayout>

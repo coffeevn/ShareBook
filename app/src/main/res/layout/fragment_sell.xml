@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvSellGT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:text="Nhập số tiền bạn muốn bán:" />
+
+    <TextView
+        android:id="@+id/tvSellDV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvSellGT"
+        android:layout_below="@+id/tvSellGT"
+        android:layout_marginTop="15dp"
+        android:lines="2"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text=".000 VNĐ" />
+
+    <EditText
+        android:id="@+id/etSellPrice"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvSellDV"
+        android:layout_toStartOf="@+id/tvSellDV"
+        android:inputType="number"
+        android:textAlignment="textEnd"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvSellConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvSellGT"
+        android:layout_below="@+id/etSellPrice"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:text="Xác nhận" />
+
+    <TextView
+        android:id="@+id/tvSellCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/tvSellConfirm"
+        android:layout_alignTop="@+id/tvSellConfirm"
+        android:layout_marginEnd="30dp"
+        android:text="Hủy bỏ"
+        android:textSize="20sp"/>
+
+
+</RelativeLayout>

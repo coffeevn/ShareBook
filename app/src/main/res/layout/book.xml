@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:id="@+id/flBookItem">
+
+    <ImageView
+        android:id="@+id/ivBookStatus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="top|right"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="visible"
+        android:id="@+id/rlBook">
+        <FrameLayout
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:id="@+id/flBookCover"
+            android:layout_marginEnd="5dp">
+            <ImageView
+                android:id="@+id/ivBookCover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SpinKitView.FoldingCube"
+                android:layout_gravity="center"
+                android:id="@+id/spinKit"
+                app:SpinKit_Color="@color/colorPrimaryDark"/>
+        </FrameLayout>
+
+
+
+        <TextView
+            android:id="@+id/tvBookName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/flBookCover"
+            android:text="Book Name"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tvBookAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tvBookName"
+            android:layout_toEndOf="@+id/flBookCover"
+            android:text="Book Author" />
+
+
+        <TextView
+            android:id="@+id/tvBookDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/flBookCover"
+            android:layout_below="@+id/tvBookAuthor"
+            android:lines="3"
+            android:text="Book description" />
+
+        <TextView
+            android:id="@+id/tvBookPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tvBookDescription"
+            android:layout_toEndOf="@+id/flBookCover"
+            android:textAlignment="textEnd"
+            android:text="Book Price" />
+
+    </RelativeLayout>
+
+</FrameLayout>
