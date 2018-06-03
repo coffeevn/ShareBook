@@ -264,7 +264,7 @@ public class AccountActivity extends AppCompatActivity {
                 return HCM;
             case 1:
                 ArrayList<String> HN = new ArrayList<>();
-                HN.add("Ba Đình");  //+20
+                HN.add("Ba Đình");
                 HN.add("Hoàn Kiếm");
                 HN.add("Hai Bà Trưng");
                 HN.add("Đống Đa");
@@ -392,11 +392,11 @@ public class AccountActivity extends AppCompatActivity {
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                             distr = position;
-                            if(khuVuc.size()==13){
+                            if(quan.size()==13){
                                 quan.remove(12);
                             }
-                            if(khuVuc.size()==11){
-                                if (location==0) {
+                            if(quan.size()==11){
+                                if (location==1) {
                                     quan.remove(10);
                                 }
                             }
@@ -428,5 +428,13 @@ public class AccountActivity extends AppCompatActivity {
     private void setQuan(int mDistrict) {
         distr = mDistrict;
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intentHome = new Intent(AccountActivity.this,HomeActivity.class);
+        finish();
+        startActivity(intentHome);
+        super.onBackPressed();
     }
 }

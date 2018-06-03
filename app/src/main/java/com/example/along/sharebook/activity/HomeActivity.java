@@ -50,7 +50,9 @@ public class HomeActivity extends AppCompatActivity {
         myRef = FirebaseDatabase.getInstance().getReference();
         mStorageRef = FirebaseStorage.getInstance().getReference();
 
+
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        myToolbar.setTitle("");
         setSupportActionBar(myToolbar);
         myToolbar.setTitle("Trang chủ");
         ActionBar actionbar = getSupportActionBar();
@@ -75,6 +77,7 @@ public class HomeActivity extends AppCompatActivity {
                                 menuItem.setChecked(true);
                                 mDrawerLayout.closeDrawers();
                                 Intent intentFind = new Intent(HomeActivity.this,FindBookActivity.class);
+                                finish();
                                 startActivity(intentFind);
                                 break;
                             case R.id.nav_newbook:
@@ -87,12 +90,14 @@ public class HomeActivity extends AppCompatActivity {
                                 menuItem.setChecked(true);
                                 mDrawerLayout.closeDrawers();
                                 Intent intentMyBook = new Intent(HomeActivity.this,SellingActivity.class);
+                                finish();
                                 startActivity(intentMyBook);
                                 break;
                             case R.id.nav_user:
                                 menuItem.setChecked(true);
                                 mDrawerLayout.closeDrawers();
                                 Intent intentUser = new Intent(HomeActivity.this,AccountActivity.class);
+                                finish();
                                 startActivity(intentUser);
                                 break;
                             case R.id.nav_logout:

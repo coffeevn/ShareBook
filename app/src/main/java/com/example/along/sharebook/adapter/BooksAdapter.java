@@ -1,6 +1,7 @@
 package com.example.along.sharebook.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
@@ -19,6 +20,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.example.along.sharebook.GlideApp;
 import com.example.along.sharebook.R;
+import com.example.along.sharebook.activity.BookDetailActivity;
 import com.example.along.sharebook.model.Book;
 import com.github.ybq.android.spinkit.SpinKitView;
 import com.google.firebase.storage.FirebaseStorage;
@@ -48,7 +50,20 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
+        holder.rlBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList<String> bookIds = new ArrayList<>();
+                for (int i = 0; i<books.size(); i++){
+                    bookIds.add(books.get(i).bID);
+                }
+                Intent intent = new Intent(context, BookDetailActivity.class);
+                intent.putStringArrayListExtra("bookNames",bookIds);
+                intent.putExtra("curPos",position);
+                context.startActivity(intent);
+            }
+        });
         holder.tvBookName.setText(books.get(position).bName);
         holder.tvBookAuthor.setText(books.get(position).bAuthor);
         holder.tvBookDescription.setText(books.get(position).bDescription);

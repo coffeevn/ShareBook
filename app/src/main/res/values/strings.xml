@@ -20,6 +20,7 @@
     <string name="district">Quận:</string>
     <string name="userDescription">Mô tả:</string>
     <string name="update">Cập nhật</string>
+    <string name="tt_time_gmt">%1$s</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -3,19 +3,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/usericon"
+            android:icon="@drawable/homeicon"
             android:title="Trang chủ" />
         <item
             android:id="@+id/nav_findbook"
-            android:icon="@drawable/usericon"
+            android:icon="@drawable/findicon"
             android:title="Tìm sách" />
         <item
             android:id="@+id/nav_newbook"
-            android:icon="@drawable/usericon"
+            android:icon="@drawable/addicon"
             android:title="Đăng tin mới" />
         <item
             android:id="@+id/nav_mybook"
-            android:icon="@drawable/usericon"
+            android:icon="@drawable/sellingicon"
             android:title="Sách đang bán" />
         <item
             android:id="@+id/nav_user"
@@ -23,7 +23,7 @@
             android:title="Tài khoản" />
         <item
             android:id="@+id/nav_logout"
-            android:icon="@drawable/usericon"
+            android:icon="@drawable/logouticon"
             android:title="Đăng xuất" />
     </group>
 </menu>
